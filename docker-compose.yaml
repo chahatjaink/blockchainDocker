@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  api:
+    build: ./api
+    container_name: nodeapp_c
+    ports: 
+      - 3000:3000
+  reactapp:
+    build: ./deqodeapp
+    container_name: react_c
+    ports: 
+      - 4000:4000
+    stdin_open: true
+    tty: true
